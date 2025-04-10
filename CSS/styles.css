@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  margin: 0px;
+  padding: 8px;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-image: url(https://images.unsplash.com/photo-1687392946859-cebb261f01f5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+/* BLURRED BOX CONTAINER */
+
+.container{
+  background-color: rgba(218, 238, 255, 0.048);
+  backdrop-filter: blur(30px);
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.248);
+  display: table;
+  max-width: 100%;
+  min-width: 9px;
+  position: flex;
+  resize: both;
+  overflow: auto;
+}
+
+/* HEADER INSIDE CONTAINER */
+
+.logo{
+  background-color: aliceblue;
+  border-radius: 50px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.273);
+  margin: auto;
+  display: flex;
+}
+
+.header{
+  color: aliceblue;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.248);
+}
+
+/* LOGIN PAGE STYLE */
+
+/* LOGIN TEXT */
+.sub_heading{
+  color: aliceblue;
+  text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.484);
+  text-align: center;
+}
+
+/* INSTRUCTIONS */
+.instruction{
+  color: aliceblue;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.248);
+}
+
+/* STUDENT ID PLACEHOLDER */
+.text{
+  border-radius: 20px;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0);
+  outline-color: rgb(0, 102, 255);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.273);
+  display: flex;
+  min-width: 100%;
+  max-width: 100%;
+  position: static;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.text:hover{
+  transform: scale(1.01);
+  box-shadow: 0 0 10px #fff;
+}
+
+.SIDtext{
+  font-size: 13px;
+  color: white;
+  text-shadow: 0px 1px 5px white;
+  margin-top: 5px;
+  margin-bottom: auto;
+  padding-bottom: 0%;
+  padding-top: 0%;
+}
+
+/* EMAIL PLACEHOLDER */
+.email{
+  border-radius: 20px;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0);
+  outline-color: rgb(0, 102, 255);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.273);
+  display: flex;
+  min-width: 100%;
+  max-width: 100%;
+  position: static;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.email:hover{
+  transform: scale(1.01);
+  box-shadow: 0 0 10px #fff;
+}
+
+.emailtxt{
+  font-size: 13px;
+  color: white;
+  text-shadow: 0px 1px 5px white;
+  margin-top: 5px;
+  margin-bottom: auto;
+  padding-bottom: 0%;
+  padding-top: 0%;
+}
+
+/* PASSWORD PLACEHOLDER */
+.password{
+  border-radius: 20px;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0);
+  outline-color: rgb(0, 102, 255);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.273);
+  display: flex;
+  min-width: 100%;
+  max-width: 100%;
+  position: static;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.password:hover{
+  transform: scale(1.01);
+  box-shadow: 0 0 10px #fff;
+}
+
+.pwtxt{
+  font-size: 13px;
+  color: white;
+  text-shadow: 0px 1px 5px white;
+  margin-top: 5px;
+  margin-bottom: auto;
+  padding-bottom: 0%;
+  padding-top: 0%;
+}
+
+/* MOBILE NUMBER PLACEHOLDER */
+.tel{
+  border-radius: 20px;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0);
+  outline-color: rgb(0, 102, 255);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.273);
+  display: flex;
+  min-width: 100%;
+  max-width: 100%;
+  position: flex;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tel:hover{
+  transform: scale(1.01);
+  box-shadow: 0 0 10px #fff;
+}
+
+.mobnumtxt{
+  font-size: 13px;
+  color: white;
+  text-shadow: 0px 1px 5px white;
+  margin-top: 5px;
+  margin-bottom: auto;
+  padding-bottom: 0%;
+  padding-top: 0%;
+}
+
+/* INPUT VALIDATION */
+input:invalid:not(:placeholder-shown){
+  border-color: red;
+  background-image: url(red_check.png);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: calc(100% - 10px);
+}
+
+input:valid:not(:placeholder-shown){
+  border-color: rgb(0, 225, 0);
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/1200px-Eo_circle_green_checkmark.svg.png);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: calc(100% - 10px);
+}
+
+input:invalid:not(:placeholder-shown) + p{
+  color: red;
+  text-shadow: 0px 1px 5px rgb(255, 110, 110);
+  font-weight: 600;
+}
+
+input:valid:not(:placeholder-shown) + p{
+  color: white;
+  text-shadow: 0px 1px 5px white;
+  font-weight: 600;
+  position: absolute;
+  opacity: 0;
+}
+
+input:invalid ~ button[type="submit"]{
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* LOGIN BUTTON */
+.loginbutton{
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+  border-radius: 20px;
+  border-width: 0cap;
+  background-color: rgb(132, 173, 255);
+  box-shadow:0 2px 10px rgba(0, 0, 0, 0.248);
+  display: table;
+  width: 100px;
+  max-width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+/* LOGIN BTN ANIMATION */
+
+.loginbutton:hover{
+  transform: translateY(-5px);
+  background-color: rgb(217, 230, 255);
+  box-shadow: 0 2px 15px rgb(132, 173, 255);
+}
+
+/* NEW STUDENT HYPERLINK */
+
+.ns{
+  text-align: center
+}
+
+.newstudent{
+  color: aliceblue;
+  font-size: 13px;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.248);
+}
+
+.nslink{
+  color: rgb(118, 198, 255);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* FORGOT PASSWORD HYPERLINK */
+
+.forgotpwtext{
+  color: aliceblue;
+  font-size: 13px;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.248);
+  margin-left: 50px;
+}
+
+.forgotpw{
+  color: rgb(118, 198, 255);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ALREADY REGISTERED HYPERLINK */
+
+.aldreg{
+  text-align: center;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.aldreg{
+  color: aliceblue;
+  font-size: 13px;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.248);
+}
+
+.reglink{
+  color: rgb(118, 198, 255);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* NEED HELP HYPERLINK */
+
+.needhlp{
+  color: aliceblue;
+  font-size: 13px;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.248);
+}
+
+.help{
+  color: rgb(118, 198, 255);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* STUDENT ID PLACEHOLDER */
+.text2{
+  border-radius: 20px;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0);
+  outline-color: rgb(0, 102, 255);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.273);
+  display: flex;
+  min-width: 100%;
+  max-width: 100%;
+  position: static;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.text2:hover{
+  transform: scale(1.01);
+  box-shadow: 0 0 10px #fff;
+}
+
+/* EMAIL PLACEHOLDER */
+.email2{
+  border-radius: 20px;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0);
+  outline-color: rgb(0, 102, 255);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.273);
+  display: flex;
+  min-width: 100%;
+  max-width: 100%;
+  position: static;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.email2:hover{
+  transform: scale(1.01);
+  box-shadow: 0 0 10px #fff;
+}
+
+/* PASSWORD PLACEHOLDER */
+.password2{
+  border-radius: 20px;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0);
+  outline-color: rgb(0, 102, 255);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.273);
+  display: flex;
+  min-width: 100%;
+  max-width: 100%;
+  position: static;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.password2:hover{
+  transform: scale(1.01);
+  box-shadow: 0 0 10px #fff;
+}
+
+/* MOBILE NUMBER PLACEHOLDER */
+.tel2{
+  border-radius: 20px;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0);
+  outline-color: rgb(0, 102, 255);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.273);
+  display: flex;
+  min-width: 100%;
+  max-width: 100%;
+  position: flex;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tel2:hover{
+  transform: scale(1.01);
+  box-shadow: 0 0 10px #fff;
+}
+
+/* INPUT VALIDATION */
+input:invalid:not(:placeholder-shown){
+  border-color: red;
+  background-image: url(red_check.png);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: calc(100% - 10px);
+}
+
+input:valid{
+  border-color: rgb(0, 225, 0);
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/1200px-Eo_circle_green_checkmark.svg.png);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: calc(100% - 10px);
+}
+
+/* LOGIN BUTTON */
+.loginbutton2{
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+  border-radius: 20px;
+  border-width: 0cap;
+  background-color: rgb(132, 173, 255);
+  box-shadow:0 2px 10px rgba(0, 0, 0, 0.248);
+  display: table;
+  width: 100px;
+  max-width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+/* LOGIN BTN ANIMATION */
+
+.loginbutton:hover{
+  transform: translateY(-5px);
+  background-color: rgb(217, 230, 255);
+  box-shadow: 0 2px 15px rgb(132, 173, 255);
+}
+
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0 5vw;
+    height: auto;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 2%;
+    display: table;
+    align-items: center;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  .headercontainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 1.5em;
+    text-align: center;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  h1.header {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    padding: 0%;
+  }
+
+  h2.sub_heading {
+    font-size: 1.5rem;
+  }
+
+  input,
+  .loginbutton {
+    display: block;
+    margin: auto;
+    font-size: 0.7rem;
+  }
+
+  .SIDtext,
+  .emailtxt,
+  .pwtxt,
+  .mobnumtxt {
+    font-size: 0.65rem;
+  }
+
+  .ns,
+  .aldreg,
+  .needhlp,
+  .reglink,
+  .help,
+  .newstudent,
+  .nslink,
+  .forgotpw{
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    text-align: center;
+    padding: 1px;
+  }
+
+  .forgotpwtext{
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-right: 50px;
+    text-align: center;
+    padding: 1px;
+  }
+}
+
+/* PROFESSIONAL ANIMATIONS */
+
+/* Fade In */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Slide Fade Up */
+@keyframes slideFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glow on button hover */
+@keyframes hoverGlow {
+  from { box-shadow: 0 0 0 rgba(132, 173, 255, 0); }
+  to { box-shadow: 0 0 12px rgba(132, 173, 255, 0.6); }
+}
+
+/* Animation classes */
+.animated-container {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.animated-form {
+  animation: slideFadeUp 1.2s ease forwards;
+}
+
+/* Input staggered fade */
+form > div input {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: slideFadeUp 0.6s ease forwards;
+}
+
+form > div:nth-of-type(1) input { animation-delay: 0.3s; }
+form > div:nth-of-type(2) input { animation-delay: 0.45s; }
+form > div:nth-of-type(3) input { animation-delay: 0.6s; }
+form > div:nth-of-type(4) input { animation-delay: 0.75s; }
+
+/* Button subtle hover */
+.loginbutton:hover {
+  animation: hoverGlow 0.5s ease-in-out forwards;
+}
